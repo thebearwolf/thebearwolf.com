@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -83,6 +84,37 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Papers */}
+      <section className="max-w-2xl mx-auto px-6 py-24 md:py-32">
+        <div className="space-y-6">
+          <Link
+            href="/library/resource-technology"
+            className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
+          >
+            <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
+              Framework
+            </span>
+            <h3 className="text-xl md:text-2xl text-zinc-100 font-normal mt-3 group-hover:text-white transition-colors">
+              Resource Technology
+            </h3>
+            <p className="text-zinc-500 mt-2 text-sm">
+              Sector Definition and Framework
+            </p>
+          </Link>
+
+          <Link
+            href="/library/constructive-thermochemistry"
+            className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
+          >
+            <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
+              Paper
+            </span>
+            <h3 className="text-xl md:text-2xl text-zinc-100 font-normal mt-3 group-hover:text-white transition-colors">
+              Constructive Thermochemistry
+            </h3>
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

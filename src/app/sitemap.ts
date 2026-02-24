@@ -8,5 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/building`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/library`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/connect`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/library/resource-technology`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/library/constructive-thermochemistry`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
   ];
 }
