@@ -47,7 +47,7 @@ export default function Home() {
           {/* Portrait */}
           <div className="relative w-full sm:w-[32rem] md:w-[38rem] lg:w-[44rem] aspect-[3/4] overflow-hidden rounded bg-zinc-900 shrink-0">
             <Image
-              src="/portrait.jpg"
+              src="/compportrait.jpeg"
               alt="Bjørnulf Østvik (Bjornulf Ostvik) — BearWolf founder"
               fill
               className="object-cover"
