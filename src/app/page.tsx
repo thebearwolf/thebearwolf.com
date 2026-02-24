@@ -11,7 +11,14 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
+      {/* Subtle mountain background */}
+      <div
+        className="fixed inset-0 z-0 bg-cover bg-bottom bg-no-repeat opacity-[0.08]"
+        style={{ backgroundImage: "url(/mountain1.jpg)" }}
+        aria-hidden
+      />
+
       {/* Social links - top right */}
       <div className="fixed top-6 right-6 z-10 flex gap-4">
         <a
