@@ -6,14 +6,15 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Hero */}
       <section className="relative flex flex-col items-center justify-center min-h-screen px-6">
-        <div className="relative w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[28rem] overflow-hidden rounded bg-zinc-900 mb-10">
+        <div className="relative w-72 h-[22rem] sm:w-96 sm:h-[30rem] md:w-[28rem] md:h-[36rem] overflow-hidden rounded bg-zinc-900 mb-10">
           <Image
             src="/portrait.jpg"
             alt="Bjørnulf Østvik"
             fill
             className="object-cover"
             priority
-            sizes="(max-width: 640px) 256px, (max-width: 768px) 288px, 320px"
+            quality={95}
+            sizes="(max-width: 640px) 288px, (max-width: 768px) 384px, 448px"
           />
         </div>
 
