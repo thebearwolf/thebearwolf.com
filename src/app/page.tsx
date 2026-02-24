@@ -4,79 +4,61 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Hero */}
-      <section className="relative flex flex-col items-center justify-center min-h-screen px-6">
-        <div className="relative w-72 h-[22rem] sm:w-96 sm:h-[30rem] md:w-[28rem] md:h-[36rem] overflow-hidden rounded bg-zinc-900 mb-10">
-          <Image
-            src="/portrait.jpg"
-            alt="Bjørnulf Østvik"
-            fill
-            className="object-cover"
-            priority
-            quality={95}
-            sizes="(max-width: 640px) 288px, (max-width: 768px) 384px, 448px"
-          />
-        </div>
-
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight tracking-tight text-center">
+      {/* Header */}
+      <header className="px-6 pt-12 pb-6 md:pt-16 md:pb-8 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight tracking-tight">
           Bjørnulf Østvik
         </h1>
-
         <p className="mt-4 text-zinc-500 text-xs sm:text-sm tracking-[0.25em] uppercase">
           Founder · Scientist · Builder
         </p>
+      </header>
 
-        <div className="absolute bottom-10">
-          <svg
-            className="w-5 h-5 text-zinc-700 animate-bounce"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M19 9l-7 7-7-7"
+      {/* Main content: photo left, papers right */}
+      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+          {/* Portrait */}
+          <div className="relative w-full sm:w-[28rem] md:w-[32rem] lg:w-[36rem] aspect-[3/4] overflow-hidden rounded bg-zinc-900 shrink-0 mx-auto lg:mx-0">
+            <Image
+              src="/portrait.jpg"
+              alt="Bjørnulf Østvik"
+              fill
+              className="object-cover"
+              priority
+              quality={95}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 32rem, 36rem"
             />
-          </svg>
-        </div>
-      </section>
+          </div>
 
-      {/* Divider */}
-      <div className="flex justify-center">
-        <div className="w-12 h-px bg-zinc-800" />
-      </div>
+          {/* Papers */}
+          <div className="flex flex-col gap-6 w-full lg:pt-8">
+            <Link
+              href="/resource-technology"
+              className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
+            >
+              <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
+                Framework
+              </span>
+              <h2 className="text-xl md:text-2xl text-zinc-100 font-normal mt-3 group-hover:text-white transition-colors">
+                Resource Technology
+              </h2>
+              <p className="text-zinc-500 mt-2 text-sm">
+                Sector Definition and Framework
+              </p>
+            </Link>
 
-      {/* Featured Work */}
-      <section className="max-w-2xl mx-auto px-6 py-24 md:py-32">
-        <div className="space-y-6">
-          <Link
-            href="/resource-technology"
-            className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
-          >
-            <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
-              Framework
-            </span>
-            <h2 className="text-xl md:text-2xl text-zinc-100 font-normal mt-3 group-hover:text-white transition-colors">
-              Resource Technology
-            </h2>
-            <p className="text-zinc-500 mt-2 text-sm">
-              Sector Definition and Framework
-            </p>
-          </Link>
-
-          <Link
-            href="/constructive-thermochemistry"
-            className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
-          >
-            <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
-              Paper
-            </span>
-            <h2 className="text-xl md:text-2xl text-zinc-100 font-normal mt-3 group-hover:text-white transition-colors">
-              Constructive Thermochemistry
-            </h2>
-          </Link>
+            <Link
+              href="/constructive-thermochemistry"
+              className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
+            >
+              <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
+                Paper
+              </span>
+              <h2 className="text-xl md:text-2xl text-zinc-100 font-normal mt-3 group-hover:text-white transition-colors">
+                Constructive Thermochemistry
+              </h2>
+            </Link>
+          </div>
         </div>
       </section>
 
