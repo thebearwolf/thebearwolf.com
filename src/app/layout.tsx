@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Bjørnulf Østvik",
   description: "Founder. Scientist. Builder.",
-  metadataBase: new URL("https://thebearwolf.com"),
+  metadataBase: new URL("https://realbearwolf.com"),
   openGraph: {
     title: "Bjørnulf Østvik",
     description: "Founder. Scientist. Builder.",
-    url: "https://thebearwolf.com",
+    url: "https://realbearwolf.com",
     siteName: "Bjørnulf Østvik",
     type: "website",
   },
