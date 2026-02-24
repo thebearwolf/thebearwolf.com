@@ -14,7 +14,7 @@ export default function Home() {
     <main className="min-h-screen relative">
       {/* Subtle mountain background */}
       <div
-        className="fixed inset-0 z-0 bg-cover bg-bottom bg-no-repeat opacity-[0.25]"
+        className="fixed inset-0 z-0 bg-cover bg-bottom bg-no-repeat opacity-[0.25] pointer-events-none"
         style={{ backgroundImage: "url(/mountain1.jpg)" }}
         aria-hidden
       />
