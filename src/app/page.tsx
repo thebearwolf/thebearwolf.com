@@ -88,7 +88,7 @@ export default function Home() {
       <section className="max-w-2xl mx-auto px-6 py-24 md:py-32">
         <div className="space-y-6">
           <Link
-            href="/resource-technology"
+            href="/library/resource-technology"
             className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
           >
             <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
@@ -103,7 +103,7 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/constructive-thermochemistry"
+            href="/library/constructive-thermochemistry"
             className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
           >
             <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
