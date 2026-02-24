@@ -1,18 +1,25 @@
 # Library Papers — Source of Truth
 
-Canonical locations for papers. Update this if paths change.
+Canonical locations for papers. **Use the `/papers/` URLs for sharing** — they stay stable even if Library structure changes.
 
-## Constructive Thermochemistry
-- **PDF:** `public/library/constructive-thermochemistry/ConstructiveThermochemistry-OstvikFeb26.pdf`
-- **Page:** `src/app/library/constructive-thermochemistry/page.tsx`
-- **URL:** `/library/constructive-thermochemistry`
-- **Direct PDF URL:** `/library/constructive-thermochemistry/ConstructiveThermochemistry-OstvikFeb26.pdf`
+## Stable public URLs (use these for sharing)
 
-## Resource Technology
-- **PDF:** `public/library/resource-technology/Resource-Technology-Framework-Sep25.pdf`
-- **Page:** `src/app/library/resource-technology/page.tsx`
-- **URL:** `/library/resource-technology`
-- **Direct PDF URL:** `/library/resource-technology/Resource-Technology-Framework-Sep25.pdf`
+| Paper | URL |
+|-------|-----|
+| Constructive Thermochemistry | `https://realbearwolf.com/papers/constructive-thermochemistry.pdf` |
+| Resource Technology | `https://realbearwolf.com/papers/resource-technology.pdf` |
+
+## File locations
+
+| Paper | PDF file | Page route |
+|-------|----------|------------|
+| Constructive Thermochemistry | `public/papers/constructive-thermochemistry.pdf` | `src/app/library/constructive-thermochemistry/page.tsx` |
+| Resource Technology | `public/papers/resource-technology.pdf` | `src/app/library/resource-technology/page.tsx` |
+
+## When updating a paper
+
+1. Replace the file in `public/papers/` (keep the same filename)
+2. The URL stays the same — no link updates needed
 
 ---
 *Both papers: metadata + flattened watermark (Bjørnulf Østvik). Updated Feb 2026.*

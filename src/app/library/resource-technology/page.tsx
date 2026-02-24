@@ -45,7 +45,7 @@ export default function ResourceTechnology() {
         </header>
 
         <a
-          href="/library/resource-technology/Resource-Technology-Framework-Sep25.pdf"
+          href="/papers/resource-technology.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 border border-zinc-700 rounded-lg text-zinc-300 hover:border-zinc-500 hover:text-white transition-colors"
