@@ -44,15 +44,15 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-6 py-12 md:py-20">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
           {/* Portrait */}
-          <div className="relative w-full sm:w-[28rem] md:w-[32rem] lg:w-[36rem] aspect-[3/4] overflow-hidden rounded bg-zinc-900 shrink-0 mx-auto lg:mx-0">
+          <div className="relative w-full sm:w-[32rem] md:w-[38rem] lg:w-[44rem] aspect-[3/4] overflow-hidden rounded bg-zinc-900 shrink-0 mx-auto lg:mx-0">
             <Image
-              src="/portrait.jpg"
+              src="/portrait.jpeg"
               alt="Bjørnulf Østvik"
               fill
               className="object-cover"
               priority
               quality={95}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 32rem, 36rem"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 38rem, 44rem"
             />
           </div>
 
