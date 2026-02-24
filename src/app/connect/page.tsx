@@ -11,7 +11,7 @@ export default function Connect() {
   return (
     <main className="min-h-[60vh] flex items-center justify-center px-6">
       <p className="text-zinc-500 text-sm tracking-[0.15em] uppercase">
-        Check back soon for content
+        Content Coming Soon
       </p>
     </main>
   );
