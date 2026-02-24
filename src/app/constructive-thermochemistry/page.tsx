@@ -2,8 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Constructive Thermochemistry | Bjørnulf Østvik",
-  description: "A paper on constructive thermochemistry.",
+  title: "Constructive Thermochemistry",
+  description:
+    "Constructive thermochemistry. Bjørnulf Østvik (Bjornulf Ostvik), BearWolf founder.",
+  alternates: { canonical: "https://realbearwolf.com/constructive-thermochemistry" },
 };
 
 export default function ConstructiveThermochemistry() {

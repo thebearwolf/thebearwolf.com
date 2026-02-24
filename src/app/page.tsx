@@ -1,5 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bjørnulf Østvik | BearWolf Founder",
+  description:
+    "Bjørnulf Østvik (Bjornulf Ostvik) — BearWolf founder. Ecogensus. Resource technology. Constructive thermochemistry. Dynamic organic repolymerization. EGS-6.",
+  alternates: { canonical: "https://realbearwolf.com" },
+};
 
 export default function Home() {
   return (
@@ -30,24 +38,17 @@ export default function Home() {
         </a>
       </div>
 
-      {/* Header */}
-      <header className="px-6 pt-12 pb-6 md:pt-16 md:pb-8 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight tracking-tight">
-          Bjørnulf Østvik
+      {/* Hero: Bearwolf top-left, photo left, text right */}
+      <section className="max-w-7xl mx-auto px-6 pt-12 pb-16 md:pt-16 md:pb-24">
+        <h1 className="font-[family-name:var(--font-syne)] font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight mb-10 lg:mb-12">
+          Bearwolf
         </h1>
-        <p className="mt-4 text-zinc-500 text-xs sm:text-sm tracking-[0.25em] uppercase">
-          Founder · Scientist · Builder
-        </p>
-      </header>
-
-      {/* Main content: photo left, papers right */}
-      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start lg:items-center">
           {/* Portrait */}
-          <div className="relative w-full sm:w-[32rem] md:w-[38rem] lg:w-[44rem] aspect-[3/4] overflow-hidden rounded bg-zinc-900 shrink-0 mx-auto lg:mx-0">
+          <div className="relative w-full sm:w-[32rem] md:w-[38rem] lg:w-[44rem] aspect-[3/4] overflow-hidden rounded bg-zinc-900 shrink-0">
             <Image
-              src="/portrait.jpeg"
-              alt="Bjørnulf Østvik"
+              src="/portrait.jpg"
+              alt="Bjørnulf Østvik (Bjornulf Ostvik) — BearWolf founder"
               fill
               className="object-cover"
               priority
@@ -56,44 +57,57 @@ export default function Home() {
             />
           </div>
 
-          {/* Papers */}
-          <div className="flex flex-col gap-6 w-full lg:pt-8">
-            <Link
-              href="/resource-technology"
-              className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
-            >
-              <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
-                Framework
-              </span>
-              <h2 className="text-xl md:text-2xl text-zinc-100 font-normal mt-3 group-hover:text-white transition-colors">
-                Resource Technology
-              </h2>
-              <p className="text-zinc-500 mt-2 text-sm">
-                Sector Definition and Framework
-              </p>
-            </Link>
-
-            <Link
-              href="/constructive-thermochemistry"
-              className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
-            >
-              <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
-                Paper
-              </span>
-              <h2 className="text-xl md:text-2xl text-zinc-100 font-normal mt-3 group-hover:text-white transition-colors">
-                Constructive Thermochemistry
-              </h2>
-            </Link>
+          {/* Right: vertically centered */}
+          <div className="flex items-center lg:min-h-[calc(44rem*4/3)] lg:py-0 py-8">
+            <p className="font-[family-name:var(--font-syne)] font-semibold text-2xl sm:text-3xl md:text-4xl text-zinc-400 lg:text-zinc-500">
+              It&apos;s coming. Stay tuned.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-zinc-800/40 py-16 text-center">
-        <p className="text-zinc-700 text-xs tracking-[0.2em] uppercase">
-          More to come
+      {/* Transition: name + tagline */}
+      <section className="border-t border-zinc-800/40 py-16 md:py-24 text-center">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white">
+          Bjørnulf Østvik
+        </h2>
+        <span className="sr-only">Bjornulf Ostvik</span>
+        <p className="mt-4 text-zinc-500 text-xs sm:text-sm tracking-[0.25em] uppercase">
+          Founder · Scientist · Builder
         </p>
-      </footer>
+      </section>
+
+      {/* Papers */}
+      <section className="max-w-2xl mx-auto px-6 py-24 md:py-32">
+        <div className="space-y-6">
+          <Link
+            href="/resource-technology"
+            className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
+          >
+            <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
+              Framework
+            </span>
+            <h3 className="text-xl md:text-2xl text-zinc-100 font-normal mt-3 group-hover:text-white transition-colors">
+              Resource Technology
+            </h3>
+            <p className="text-zinc-500 mt-2 text-sm">
+              Sector Definition and Framework
+            </p>
+          </Link>
+
+          <Link
+            href="/constructive-thermochemistry"
+            className="block group border border-zinc-800/60 rounded-lg p-8 md:p-10 hover:border-zinc-700 hover:bg-zinc-900/40 transition-all duration-300"
+          >
+            <span className="text-[11px] uppercase tracking-[0.25em] text-zinc-600 font-medium">
+              Paper
+            </span>
+            <h3 className="text-xl md:text-2xl text-zinc-100 font-normal mt-3 group-hover:text-white transition-colors">
+              Constructive Thermochemistry
+            </h3>
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

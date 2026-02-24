@@ -2,9 +2,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Resource Technology — Sector Definition and Framework | Bjørnulf Østvik",
+  title: "Resource Technology — Sector Definition and Framework",
   description:
-    "A framework for defining and understanding the Resource Technology sector.",
+    "Resource technology sector definition and framework. Bjørnulf Østvik (Bjornulf Ostvik), BearWolf founder.",
+  alternates: { canonical: "https://realbearwolf.com/resource-technology" },
 };
 
 export default function ResourceTechnology() {
