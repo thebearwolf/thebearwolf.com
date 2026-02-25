@@ -16,7 +16,7 @@ export default function Header() {
           <Link
             key={href}
             href={href}
-            className="text-zinc-500 hover:text-white text-xs tracking-[0.2em] uppercase transition-colors"
+            className="text-white hover:text-zinc-300 font-bold text-sm sm:text-base tracking-[0.15em] uppercase transition-colors"
           >
             {label}
           </Link>
