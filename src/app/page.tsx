@@ -45,12 +45,12 @@ export default function Home() {
         </a>
       </div>
 
-      {/* Hero: Bearwolf top-left, photo left, text right */}
+      {/* Hero: Bearwolf top-left, photo left, text/boxes right */}
       <section className="max-w-7xl mx-auto px-6 pt-12 pb-16 md:pt-16 md:pb-24">
         <h1 className="font-[family-name:var(--font-syne)] font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight mb-10 lg:mb-12">
           Bearwolf
         </h1>
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start lg:items-center">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start lg:items-start">
           {/* Portrait */}
           <div className="relative w-full sm:w-[32rem] md:w-[38rem] lg:w-[44rem] aspect-[3/4] overflow-hidden rounded bg-zinc-900 shrink-0">
             <Image
@@ -64,24 +64,44 @@ export default function Home() {
             />
           </div>
 
-          {/* Right: vertically centered */}
-          <div className="flex items-center lg:min-h-[calc(44rem*4/3)] lg:py-0 py-8">
-            <p className="font-[family-name:var(--font-syne)] font-semibold text-2xl sm:text-3xl md:text-4xl text-zinc-400 lg:text-zinc-500">
-              It&apos;s coming. Stay tuned.
-            </p>
+          {/* Right: name + boxes */}
+          <div className="flex flex-col gap-6 w-full lg:pt-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight text-white">
+              Bjørnulf Østvik
+            </h2>
+            <span className="sr-only">Bjornulf Ostvik</span>
+
+            <Link
+              href="/story"
+              className="inline-flex items-center gap-2 px-5 py-3 border border-zinc-700 rounded-lg text-zinc-300 hover:border-zinc-500 hover:text-white transition-colors w-fit text-sm"
+            >
+              My Story
+              <span className="text-zinc-500">→</span>
+            </Link>
+
+            <div className="border border-zinc-800/60 rounded-lg p-6 md:p-8 bg-zinc-900/30">
+              <h3 className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-medium mb-4">
+                Announcement
+              </h3>
+              <div className="space-y-4 text-sm md:text-base text-zinc-300 leading-relaxed">
+                <p>
+                  <span className="text-zinc-500">Published:</span> My foundational paper on constructive thermochemistry, introducing a new resource class I call Surface Carbon.{" "}
+                  <Link
+                    href="/papers/constructive-thermochemistry.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:underline"
+                  >
+                    Read it →
+                  </Link>
+                </p>
+                <p>
+                  <span className="text-zinc-500">Coming Soon:</span> A new way for people to own critical resources directly. Stay tuned.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* Transition: name + tagline */}
-      <section className="border-t border-zinc-800/40 py-16 md:py-24 text-center">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-white">
-          Bjørnulf Østvik
-        </h2>
-        <span className="sr-only">Bjornulf Ostvik</span>
-        <p className="mt-4 text-zinc-500 text-xs sm:text-sm tracking-[0.25em] uppercase">
-          Founder · Scientist · Builder
-        </p>
       </section>
 
       {/* Papers */}

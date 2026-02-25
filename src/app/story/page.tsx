@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,6 +12,9 @@ export default function Story() {
   return (
     <main className="min-h-screen bg-[#09090b]">
       <article className="max-w-2xl mx-auto px-6 py-16 md:py-24">
+        <h1 className="text-3xl md:text-4xl font-light tracking-tight text-white mb-12">
+          Dancing
+        </h1>
         <div className="space-y-6 text-[#faf8f5] text-[15px] md:text-base leading-relaxed">
           <p>
             When I was 10, I used to ride my bike to the streets where they were building houses, just to watch. Some let me watch all day and even help. One guy built houses almost entirely by himself, big houses. I&apos;d watch for hours, picking up every trick I could. The contractors around town would give me scrap materials. I&apos;d tie a rope around big sheets of plywood and drag them home behind my bike, excited about the next thing I was going to build. It was probably a ridiculous sight.
@@ -62,11 +66,21 @@ export default function Story() {
         </div>
 
         <p
-          className="mt-16 md:mt-24 text-center italic text-xl md:text-2xl text-amber-100/90"
+          className="mt-16 md:mt-24 text-center italic text-2xl md:text-3xl lg:text-4xl text-amber-100 font-medium"
           style={{ fontFamily: "var(--font-cormorant)" }}
         >
           We come into this world dancing.
         </p>
+
+        <div className="mt-10 md:mt-14 relative w-full aspect-[4/3] max-w-xl mx-auto overflow-hidden rounded">
+          <Image
+            src="/daughterdancing.jpeg"
+            alt="Daughter dancing in the sunset"
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 100vw, 36rem"
+          />
+        </div>
       </article>
     </main>
   );
